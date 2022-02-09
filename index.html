@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- React CDN -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind configs -->
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+            colors: {
+                "bookmark-purple": "#5267DF",
+                "bookmark-red": "#FA5959",
+                "bookmark-blue": "#242A45",
+                "bookmark-grey": "#9194A2",
+                "bookmark-white": "#f7f7f7",
+            }
+        },
+        container: {
+            center: true,
+            padding: "1rem",
+            screens: {
+                lg: "1124px",
+                xl: "1124px",
+                "2xl":"1124px"
+            }
+        }
+      }
+    }
+  </script>
+
+<!-- Tailwind custom styles -->
+<style type="text/tailwindcss">
+    @layer utilities {
+      .btn {
+        @apply shadow-md py-3 px-6 rounded-md transition duration-300 
+      }
+      .btn-purple{
+        @apply bg-bookmark-purple text-white
+      }
+      .btn-white{
+        @apply bg-bookmark-white
+      }
+    }
+  </style>
+    <title>Bookmark landing page</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="../App.js"></script>
+    
+</body>
+</html>
